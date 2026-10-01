@@ -6,11 +6,21 @@ namespace ZooOOPInheritance
 {
     internal class Rabbit : Animal
     {
+        //Class property.
+        private bool OnGround;
+
+        //Constructor of class properties.
+        public Rabbit(string sound, string personality, string name, string fur, string tail, bool onGround) : base (sound, personality, name, fur, tail)
+        {
+            Personality = personality;
+            OnGround = onGround;
+        }
         
         //MakeSound
-        public override void MakeSound()
+        public override void MakeSound(string name)
         {
-            Console.WriteLine("Kaninen stampar! Nu är den arg!");
+            string stomp = "Nä, nu stampar" + name + "! Nu är hon arg!";
+            Console.WriteLine(stomp);
         }
         //Run
         public override void Run()
@@ -20,14 +30,17 @@ namespace ZooOOPInheritance
         //Behaviour unique to rabbits.
         public override void Behaviour()
         {
-            Console.WriteLine("Kaninen lägger sig på magen för att sova bredvid en annan artfrände.");
-            Console.WriteLine(" Men akta dig för att gå för nära, för att då reser dom sig upp igen!");
+            Console.WriteLine("Kaninen gräver sig ner i jorden.");
+            
         }
+        
         //Dig method.
-        public static void Dig()
+        public void PickUp(string name, string sound)
         {
-            Console.WriteLine("Kaninen gräver sig ner i jorden. ");
-            Console.WriteLine("Till skillnad ifrån harar som bara gräver gryt så gör kaniner hela tunnlar.");
+            bool onGround = false;
+
+            Console.WriteLine(name + " blir inte glad av att bli upplockad.");
+            Console.WriteLine("Hon börjar " + sound + " av vrede!");
         }
     }
 }
