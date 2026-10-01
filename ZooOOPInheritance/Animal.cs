@@ -7,31 +7,23 @@ namespace ZooOOPInheritance
     internal class Animal
     {
         //Sound
-        public string Sound;
+        public string Sound { get; set; }
         //Habits.
-        public string Personality;
-        //NumberOfLegs.
-        public string Name;
+        public string Personality { get; set; }
+        //Name of the animal.
+        public string Name { get; set; }
         //Fur Constructor.
-        public string Fur;
+        public string Fur { get; set; }
         //Tail.
-        public string Tail;
+        public string Tail { get; set; }
 
-        
-        public Animal (string sound, string personality, string name, string fur, string tail)
-        {
-            Sound = sound;
-            Personality = personality;
-            Name = name;
 
-            Fur = fur;
-            Tail = tail;
-        }
+
 
         //MakeSound Method for making some noise. Originally I called this method "MakeSomeNoise".
-        public virtual void MakeSound(string name)
+        public virtual void MakeSound()
         {
-            Console.WriteLine("Nu hör du " + name + "Oj vad hon låter!");
+            Console.WriteLine("Nu hör du " + Name + "Oj vad hon låter!");
         }
         //RunMethod for seeing how fast the animal can run and for what reason.
         public virtual void Run()
