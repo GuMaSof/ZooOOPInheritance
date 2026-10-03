@@ -7,13 +7,9 @@ namespace ZooOOPInheritance
 {
     internal class Rabbit : Animal
     {
-        public string CannotSwim = "";//Will change this one later.
-
         //Class property.
-        public bool OnGround { get; set; } //Will move this later.
+        private bool canSwim = false;
 
-        
-        
         //MakeSound
         public override void MakeSound()
         {
