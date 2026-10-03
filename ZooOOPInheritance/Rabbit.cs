@@ -8,7 +8,7 @@ namespace ZooOOPInheritance
     internal class Rabbit : Animal
     {
         //Class property.
-        protected string stomp = " stampar ";
+        protected string stomp = "stampar";
         protected bool canSwim = false;
         
         //Cnstructor for inheritance from Animal class.
@@ -31,7 +31,7 @@ namespace ZooOOPInheritance
         //MakeSound
         public override void MakeSound()
         {
-            Console.WriteLine("Nä, " + name + stomp + "! Nu är hon arg!");
+            Console.WriteLine("Nä, " + name + " " + stomp + "! Nu är hon arg!");
         }
         //Run
         public override void Run()
@@ -42,7 +42,7 @@ namespace ZooOOPInheritance
         public override void Behaviour()
         {
 
-            Console.WriteLine(name + habits);
+            Console.WriteLine(name + " " + habits);
         }
 
         public void PickUp()
