@@ -12,6 +12,7 @@
 
             Marmot marmot = new Marmot("låter ju som en fågel!", "gräver", "Otto", "Kort och brungrå", "Kort", "tar tag i maten");
 
+            SwampRabbit swampRabbit = new SwampRabbit("grymta", "gräver.", "Louise", "Kort och brun", "Fluffig och kort", "stampar", true);
         }
     }
 }
