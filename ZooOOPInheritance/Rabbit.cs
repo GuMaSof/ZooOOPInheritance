@@ -16,6 +16,13 @@ namespace ZooOOPInheritance
         {
             this.canSwim = canSwim;
             this.stomp = stomp;
+            //Assigning values to inherited variables from the upper class Animal.
+            sound = "grymta";
+            habits = "gräver.";
+            name = "Nellie";
+
+            fur = "Lång och brun";
+            tail = "Fluffig";
         }
 
         
