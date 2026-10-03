@@ -8,7 +8,7 @@
 
             Animal animal = new Animal("Mjau", "skygg", "Malte", "långt", "lång och yvig");
 
-            animal.Run();
+            rabbit.Bathe();
         }
     }
 }

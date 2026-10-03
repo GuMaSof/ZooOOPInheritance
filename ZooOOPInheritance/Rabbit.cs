@@ -49,5 +49,17 @@ namespace ZooOOPInheritance
             Console.WriteLine("Hon börjar " + sound + " av vrede!");
 
         }
+
+        public void Bathe()
+        {
+            if (canSwim == true)
+            {
+                Console.WriteLine("Ser man på, " + name + " kan simma!");
+            }
+            else
+            {
+                Console.WriteLine(name + " tycker inte om att bada. Hon hoppar ut ur vattnet för att fly!");
+            }
+        }
     }
 }
