@@ -23,7 +23,7 @@ namespace ZooOOPInheritance
             name = "Nellie";
 
             fur = "Lång och brun";
-            tail = "Fluffig";
+            tail = "Fluffig och kort";
         }
 
         //MakeSound

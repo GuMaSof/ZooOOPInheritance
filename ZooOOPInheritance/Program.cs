@@ -7,8 +7,6 @@
             Rabbit rabbit = new Rabbit("grymta", "gräver.", "Nellie", "Lång och brun", "Fluffig", "stampar", false);
 
             Animal animal = new Animal("Mjau", "skygg", "Malte", "långt", "lång och yvig");
-
-            rabbit.Bathe();
         }
     }
 }
