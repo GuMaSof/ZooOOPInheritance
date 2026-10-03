@@ -49,7 +49,7 @@ namespace ZooOOPInheritance
             Console.WriteLine("Hon börjar " + sound + " av vrede!");
 
         }
-
+        //We are going to move this one later.
         public void Bathe()
         {
             if (canSwim == true)
