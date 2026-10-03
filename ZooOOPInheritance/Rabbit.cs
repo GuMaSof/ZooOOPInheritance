@@ -9,21 +9,21 @@ namespace ZooOOPInheritance
     {
         //Class property.
         protected string stomp = "stampar";
-        protected bool canSwim = false;
         
         //Cnstructor for inheritance from Animal class.
-        public Rabbit (string sound, string habits, string name, string fur, string tail, string stomp, bool canSwim) : base( sound, habits, name, fur, tail)
+        public Rabbit (string sound, string habits, string name, string fur, string tail, string stomp) : base( sound, habits, name, fur, tail)
         {
-            //Providing access to protected variables above in this class.
-            this.canSwim = canSwim;
+            //Providing access to protected the variable above in this class.
             this.stomp = stomp;
+
             //Assigning values to inherited variables from the upper class Animal.
             sound = "grymta";
             habits = "gräver.";
             name = "Nellie";
-
+            
             fur = "Lång och brun";
             tail = "Fluffig och kort";
+            
         }
 
         //MakeSound
@@ -49,17 +49,6 @@ namespace ZooOOPInheritance
             Console.WriteLine("Hon börjar " + sound + " av vrede!");
 
         }
-        //We are going to move this one later.
-        public void Bathe()
-        {
-            if (canSwim == true)
-            {
-                Console.WriteLine("Ser man på, " + name + " kan simma!");
-            }
-            else
-            {
-                Console.WriteLine(name + " tycker inte om att bada. Hon hoppar ut ur vattnet för att fly!");
-            }
-        }
+        
     }
 }
