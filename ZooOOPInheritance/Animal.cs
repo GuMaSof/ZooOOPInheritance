@@ -16,7 +16,7 @@ namespace ZooOOPInheritance
         However I now believe that it shall be fine if we design a menu structure,
         with much and clear commmunication offered.*/
         private string sound;
-        private string personality;
+        private string habits;
         private string name;
 
         private string fur;
@@ -28,10 +28,10 @@ namespace ZooOOPInheritance
             set { sound = value; }
         }
         //Habits.
-        public string Personality
+        public string Habits
         {
-            get { return personality; }
-            set { personality = value; }
+            get { return habits; }
+            set { habits = value; }
         }
         //Name of the animal.
         public string Name
