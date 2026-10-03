@@ -40,12 +40,12 @@ namespace ZooOOPInheritance
         //RunMethod for seeing how fast the animal can run and for what reason.
         public virtual void Run()
         {
-            Console.WriteLine("Kolla hur snabbt den rör sig! Helt otroligt!");
+            Console.WriteLine("Kolla hur snabbt " + this.name + " rör sig! Helt otroligt!");
         }
         //Behaviour for displaying the various different habits of the animals.
         public virtual void Behaviour()
         {
-            Console.WriteLine(name + " " + habits + ".");
+            Console.WriteLine(name + " är " + habits + ".");
         }
     }
 }

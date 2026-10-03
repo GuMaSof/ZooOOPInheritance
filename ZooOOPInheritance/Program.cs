@@ -5,8 +5,10 @@
         static void Main(string[] args)
         {
             Rabbit rabbit = new Rabbit("grymta", "gräver.", "Nellie", "Lång och brun", "Fluffig", "stampar", false);
-            
-            rabbit.Run();
+
+            Animal animal = new Animal("Mjau", "skygg", "Malte", "långt", "lång och yvig");
+
+            animal.Run();
         }
     }
 }
