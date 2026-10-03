@@ -24,7 +24,12 @@ namespace ZooOOPInheritance
 
         public Animal (string sound, string habits, string name, string fur, string tail)
         {
-            this.sound; this.habits; this.name; this.fur; this.tail;
+            this.sound = sound;
+            this.habits = habits;
+            this.name = name;
+
+            this.fur = fur;
+            this.tail = tail;
         }
 
         //MakeSound Method for making some noise. Originally I called this method "MakeSomeNoise".

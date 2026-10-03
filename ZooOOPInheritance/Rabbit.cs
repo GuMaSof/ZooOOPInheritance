@@ -8,11 +8,11 @@ namespace ZooOOPInheritance
     internal class Rabbit : Animal
     {
         //Class property.
-        private bool canSwim = false;
+        protected bool canSwim = false;
         //Will put my constructor here.
-        public Rabbit (string sound, string habits, string name, string fur, string tail, bool canSwim)
+        public Rabbit (string sound, string habits, string name, string fur, string tail, bool canSwim) : base(sound, habits, name, fur, tail)
         {
-            this.canSwim;
+            this.canSwim = canSwim;
         }
 
         //MakeSound

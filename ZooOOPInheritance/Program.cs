@@ -4,15 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Animal animal = new Animal
-            {
-                Sound = "Grymta",
-                Habits = "Gräva",
-                Name = "Nellie",
-                Fur = "Lång",
-                Tail = "Fluffig"
-            };
-            animal.Behaviour();
+            
         }
     }
 }
