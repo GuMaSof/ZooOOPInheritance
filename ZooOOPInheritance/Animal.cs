@@ -6,31 +6,51 @@ namespace ZooOOPInheritance
 {
     internal class Animal
     {
+        /* I have chosen to write complete syntax over the simplified one,
+         * because I want to have a proper constructor,
+         * after deliberation about what the purpose of a constructor is and how it shall fit into this project.
+         Particularly in relation to the user.
+        
+         I had previously been worried that a user would be confused by usage of the constructor,
+        and it's enormous requirements for various forms of input.
+        However I now believe that it shall be fine if we design a menu structure,
+        with much and clear commmunication offered.*/
+        private string sound;
+        private string personality;
+        private string name;
+
+        private string fur;
+        private string tail;
         //Sound
-        public string Sound { get; set; }
+        public string Sound
+        {
+            get { return sound; }
+            set { sound = value; }
+        }
         //Habits.
-        public string Personality { get; set; }
+        public string Personality
+        {
+            get { return personality; }
+            set { personality = value; }
+        }
         //Name of the animal.
-        public string Name { get; set; }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
+        }
         //Fur Constructor.
-        public string Fur { get; set; }
+        public string Fur
+        {
+            get { return fur; }
+            set { fur = value; }
+        }
         //Tail.
-        public string Tail { get; set; }
-
-<<<<<<< HEAD
-        //Non-physical traits of the animals.
-        private string sound = "Nu hör du djuren! Oj vad dom låter!";
-        private string habits = "Se hur skygg varelsen är!";
-        //Physical traits of the animals.
-        private int numberOfLegs = 4;
-        private string fur = "Lång päls för att hålla djuret varmt.";
-        private string tail = "Det här djuret har en lång svans.";
-        //Sound constructor
-        //
-=======
-
-
->>>>>>> bef7e521ad41d8cec950ee1c4e1673c1e424c53a
+        public string Tail
+        {
+            get { return tail; }
+            set { tail = value; }
+        }
 
         //MakeSound Method for making some noise. Originally I called this method "MakeSomeNoise".
         public virtual void MakeSound()

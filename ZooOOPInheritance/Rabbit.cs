@@ -18,7 +18,7 @@ namespace ZooOOPInheritance
 
         //Class property.
         public bool OnGround { get; set; }
-
+        
         
 
         //MakeSound
