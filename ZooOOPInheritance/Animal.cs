@@ -35,7 +35,7 @@ namespace ZooOOPInheritance
         //MakeSound Method for making some noise. Originally I called this method "MakeSomeNoise".
         public virtual void MakeSound()
         {
-            Console.WriteLine("Nu hör du " + name + "Oj vad hon låter!");
+            Console.WriteLine(sound);
         }
         //RunMethod for seeing how fast the animal can run and for what reason.
         public virtual void Run()
