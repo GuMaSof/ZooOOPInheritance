@@ -15,41 +15,16 @@ namespace ZooOOPInheritance
         and it's enormous requirements for various forms of input.
         However I now believe that it shall be fine if we design a menu structure,
         with much and clear commmunication offered.*/
-        private string sound;
-        private string habits;
-        private string name;
+        protected string sound;
+        protected string habits;
+        protected string name;
 
-        private string fur;
-        private string tail;
-        //Sound
-        public string Sound
+        protected string fur;
+        protected string tail;
+
+        public Animal (string sound, string habits, string name, string fur, string tail)
         {
-            get { return sound; }
-            set { sound = value; }
-        }
-        //Habits.
-        public string Habits
-        {
-            get { return habits; }
-            set { habits = value; }
-        }
-        //Name of the animal.
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-        //Fur Constructor.
-        public string Fur
-        {
-            get { return fur; }
-            set { fur = value; }
-        }
-        //Tail.
-        public string Tail
-        {
-            get { return tail; }
-            set { tail = value; }
+            this.sound; this.habits; this.name; this.fur; this.tail;
         }
 
         //MakeSound Method for making some noise. Originally I called this method "MakeSomeNoise".

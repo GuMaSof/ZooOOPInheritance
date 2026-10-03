@@ -12,7 +12,7 @@ namespace ZooOOPInheritance
         //Will put my constructor here.
         public Rabbit (string sound, string habits, string name, string fur, string tail, bool canSwim)
         {
-            
+            this.canSwim;
         }
 
         //MakeSound
