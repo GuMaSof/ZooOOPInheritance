@@ -36,8 +36,6 @@ namespace ZooOOPInheritance
 
         public void PickUp()
         {
-            bool onGround = false;
-
             Console.WriteLine(name + " blir inte glad av att bli upplockad.");
             Console.WriteLine("Hon börjar " + sound + " av vrede!");
 
