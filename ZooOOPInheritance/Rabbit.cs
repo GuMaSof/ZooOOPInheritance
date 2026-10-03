@@ -23,8 +23,7 @@ namespace ZooOOPInheritance
         //MakeSound
         public override void MakeSound()
         {
-            string stomp = "" + sound + name + "! Nu är hon arg!";
-            Console.WriteLine(stomp);
+            Console.WriteLine(stomp + name + "! Nu är hon arg!");
         }
         //Run
         public override void Run()
