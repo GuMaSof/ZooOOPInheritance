@@ -8,18 +8,22 @@ namespace ZooOOPInheritance
     internal class Rabbit : Animal
     {
         //Class property.
+        protected string stomp = "Nä, nu stampar ";
         protected bool canSwim = false;
+        
         //Will put my constructor here.
-        public Rabbit (string sound, string habits, string name, string fur, string tail, bool canSwim) : base(sound, habits, name, fur, tail)
+        public Rabbit (string sound, string habits, string name, string fur, string tail, string stomp, bool canSwim) : base(sound, habits, name, fur, tail)
         {
             this.canSwim = canSwim;
+            this.stomp = stomp;
         }
 
+        
         
         //MakeSound
         public override void MakeSound()
         {
-            string stomp = "Nä," + sound + name + "! Nu är hon arg!";
+            string stomp = "" + sound + name + "! Nu är hon arg!";
             Console.WriteLine(stomp);
         }
         //Run
