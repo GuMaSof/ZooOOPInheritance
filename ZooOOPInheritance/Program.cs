@@ -12,8 +12,7 @@
                 Fur = "Lång",
                 Tail = "Fluffig"
             };
-            animal.Behaviour(); //Shall test changes in the method.
-            
+            animal.Behaviour();
         }
     }
 }
