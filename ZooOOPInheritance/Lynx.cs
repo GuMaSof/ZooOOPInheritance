@@ -12,11 +12,26 @@ namespace ZooOOPInheritance
             this.climbTree = climbTree;
             //Assigning values to inherited variables from the upper class Animal.
             sound = "Mjau";
-            habits = "Skär kött i smådelar innan han äter.";
+            habits = "skär köttet i smådelar innan han äter.";
             name = "Amadeus";
 
             fur = "Kort of gulbrun";
             tail = "Kort";
+        }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine(sound + " säger " + name);
+        }
+        //RunMethod for seeing how fast the animal can run and for what reason.
+        public override void Run()
+        {
+            Console.WriteLine(name + " vill inte umgås, så han sticker någon annanstans.");
+        }
+        //Behaviour for displaying the various different habits of the animals.
+        public override void Behaviour()
+        {
+            Console.WriteLine(name + " har fått mat och " + habits + ". Så elegant!");
         }
     }
 }
