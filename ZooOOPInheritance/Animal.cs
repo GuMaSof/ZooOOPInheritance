@@ -15,12 +15,12 @@ namespace ZooOOPInheritance
         and it's enormous requirements for various forms of input.
         However I now believe that it shall be fine if we design a menu structure,
         with much and clear commmunication offered.*/
-        protected string sound;
-        protected string habits;
-        protected string name;
+        protected string sound = "Mjau";
+        protected string habits = "skygg";
+        protected string name = "Malte";
 
-        protected string fur;
-        protected string tail;
+        protected string fur = "långt";
+        protected string tail = "lång och yvig";
 
         public Animal (string sound, string habits, string name, string fur, string tail)
         {
