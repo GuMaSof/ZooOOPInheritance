@@ -8,12 +8,13 @@ namespace ZooOOPInheritance
     internal class Rabbit : Animal
     {
         //Class property.
-        protected string stomp = "Nä, nu stampar ";
+        protected string stomp = " stampar ";
         protected bool canSwim = false;
         
-        //Will put my constructor here.
-        public Rabbit (string sound, string habits, string name, string fur, string tail, string stomp, bool canSwim) : base(sound, habits, name, fur, tail)
+        //Cnstructor for inheritance from Animal class.
+        public Rabbit (string sound, string habits, string name, string fur, string tail, string stomp, bool canSwim) : base( sound, habits, name, fur, tail)
         {
+            //Providing access to protected variables above in this class.
             this.canSwim = canSwim;
             this.stomp = stomp;
             //Assigning values to inherited variables from the upper class Animal.
@@ -30,7 +31,7 @@ namespace ZooOOPInheritance
         //MakeSound
         public override void MakeSound()
         {
-            Console.WriteLine(stomp + name + "! Nu är hon arg!");
+            Console.WriteLine("Nä, " + name + stomp + "! Nu är hon arg!");
         }
         //Run
         public override void Run()
