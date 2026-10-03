@@ -26,8 +26,6 @@ namespace ZooOOPInheritance
             tail = "Fluffig";
         }
 
-        
-        
         //MakeSound
         public override void MakeSound()
         {
@@ -36,7 +34,7 @@ namespace ZooOOPInheritance
         //Run
         public override void Run()
         {
-            Console.WriteLine(name + " blir rädd och hoppar ned i sin håla där den känner sig säker.");
+            Console.WriteLine(name + " blir rädd och hoppar ned i sin håla där hon känner sig säker.");
         }
         //Behaviour unique to rabbits.
         public override void Behaviour()
