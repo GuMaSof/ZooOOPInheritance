@@ -6,13 +6,13 @@ namespace ZooOOPInheritance
 {
     internal class Lynx : Animal
     {
-        protected string climbTree = "klättrar i trädet";
+        protected string climbTree = "klättrar i ett trädet";
         public Lynx(string sound, string habits, string name, string fur, string tail, string climbTree) : base(sound, habits, name, fur, tail)
         {
             this.climbTree = climbTree;
             //Assigning values to inherited variables from the upper class Animal.
             sound = "Mjau";
-            habits = "skär köttet i smådelar innan han äter.";
+            habits = "skär köttet i små delar.";
             name = "Amadeus";
 
             fur = "Kort of gulbrun";
@@ -31,7 +31,12 @@ namespace ZooOOPInheritance
         //Behaviour for displaying the various different habits of the animals.
         public override void Behaviour()
         {
-            Console.WriteLine(name + " har fått mat och " + habits + ". Så elegant!");
+            Console.WriteLine(name + " har fått mat och " + habits + " innan han äter. Så elegant!");
+        }
+
+        public void ClimbTree()
+        {
+            Console.WriteLine(name + " " + climbTree + ".");
         }
     }
 }
