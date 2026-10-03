@@ -10,14 +10,10 @@ namespace ZooOOPInheritance
 
         public string Sound = "Kaninen stampar! Nu är den arg!";
         public string Habits = "Kaninen lägger sig på magen för att sova bredvid en annan artfrände. Men akta dig för att gå för nära, för att då reser dom sig upp igen!";
-        public string CannotSwim = ""
-        //MakeSound
-        public override void MakeSound()
-        {
-            Console.WriteLine(Sound);
+        public string CannotSwim = "";//Will change this one later.
 
         //Class property.
-        public bool OnGround { get; set; }
+        public bool OnGround { get; set; } //Will move this later.
         
         
 
@@ -50,6 +46,7 @@ namespace ZooOOPInheritance
         {
             Console.WriteLine("Kaninen gräver sig ner i jorden.");
             Console.WriteLine("Till skillnad ifrån harar som bara gräver gryt så gör kaniner hela tunnlar.");
+        }
 
         public void PickUp()
         {

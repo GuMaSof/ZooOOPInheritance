@@ -55,11 +55,7 @@ namespace ZooOOPInheritance
         //MakeSound Method for making some noise. Originally I called this method "MakeSomeNoise".
         public virtual void MakeSound()
         {
-<<<<<<< HEAD
-            Console.WriteLine(sound);
-=======
             Console.WriteLine("Nu hör du " + Name + "Oj vad hon låter!");
->>>>>>> bef7e521ad41d8cec950ee1c4e1673c1e424c53a
         }
         //RunMethod for seeing how fast the animal can run and for what reason.
         public virtual void Run()
@@ -69,7 +65,7 @@ namespace ZooOOPInheritance
         //Behaviour for displaying the various different habits of the animals.
         public virtual void Behaviour()
         {
-            Console.WriteLine(habits);
+            Console.WriteLine("Djuret gömmer sig. Se hur skyggt det är!");
         }
     }
 }
