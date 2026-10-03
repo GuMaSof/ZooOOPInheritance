@@ -65,7 +65,7 @@ namespace ZooOOPInheritance
         //Behaviour for displaying the various different habits of the animals.
         public virtual void Behaviour()
         {
-            Console.WriteLine("Djuret gömmer sig. Se hur skyggt det är!");
+            Console.WriteLine(Name + " " + Habits + ".");
         }
     }
 }
