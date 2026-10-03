@@ -7,16 +7,14 @@ namespace ZooOOPInheritance
 {
     internal class Rabbit : Animal
     {
-
-        public string Sound = "Kaninen stampar! Nu är den arg!";
-        public string Habits = "Kaninen lägger sig på magen för att sova bredvid en annan artfrände. Men akta dig för att gå för nära, för att då reser dom sig upp igen!";
         public string CannotSwim = "";//Will change this one later.
 
         //Class property.
         public bool OnGround { get; set; } //Will move this later.
-        
-        
 
+        public string Sound = "Kaninen stampar! Nu är den arg!";
+        public string Habits = "Kaninen lägger sig på magen för att sova bredvid en annan artfrände. Men akta dig för att gå för nära, för att då reser dom sig upp igen!";
+        
         //MakeSound
         public override void MakeSound()
         {
