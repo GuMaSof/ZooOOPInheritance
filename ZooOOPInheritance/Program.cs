@@ -73,36 +73,50 @@
                             Console.WriteLine("Tryck [4] för att få se en åsnesvanshare");
 
                             Console.WriteLine("Tryck [5] för att få se ett lodjur.");
+                            inputString2 = Console.ReadLine();
 
-                            //I call this one the "Animal menu".
-                            switch (inputInteger1)
+                            //Seeking errors in and converts input for the choice of animal in the larger "Animal menu".
+                            if (Int32.TryParse(inputString2, out inputInteger2))
                             {
-                                case 1:
-                                    Console.WriteLine("Murmeldjur alltså! Vilket roligt val!");
-                                    Console.WriteLine("Vårt murmeldjur heter Otto.");
+                                //I call this one the "Animal menu".
+                                switch (inputInteger2)
+                                {
+                                    case 1:
+                                        Console.WriteLine("Murmeldjur alltså! Vilket roligt val!");
+                                        Console.WriteLine("Vårt murmeldjur heter Otto.");
 
-                                    Console.WriteLine("Välj [1] för att få höra murmeldjurets läte.");
-                                    Console.WriteLine("Välj [2] för att se på murmeldjurets beteende.");
+                                        Console.WriteLine("Välj [1] för att få höra murmeldjurets läte.");
+                                        Console.WriteLine("Välj [2] för att se på murmeldjurets beteende.");
 
-                                    Console.WriteLine("Välj [3] för att mata murmeldjuret.");
-                                    Console.WriteLine("Välj [4] för att få murmeldjuret att gå.");
-                                    break;
-                                case 2:
-                                    Console.WriteLine("Kanin alltså! Vilket roligt val!");
+                                        Console.WriteLine("Välj [3] för att mata murmeldjuret.");
+                                        Console.WriteLine("Välj [4] för att få murmeldjuret att gå.");
+                                        break;
+                                    case 2:
+                                        Console.WriteLine("Kanin alltså! Vilket roligt val!");
 
-                                    Console.WriteLine("Välj [1] för att få höra kaninens läte.");
-                                    Console.WriteLine("Välj [2] för att se på kaninens beteende.");
+                                        Console.WriteLine("Välj [1] för att få höra kaninens läte.");
+                                        Console.WriteLine("Välj [2] för att se på kaninens beteende.");
 
-                                    Console.WriteLine("Välj [3] för att plocka upp kaninen.");
-                                    Console.WriteLine("Välj [4] för att få kaninen att gå.");
-                                    break;
-                                case 3:
-                                    break;
-                                case 4:
-                                    break;
-                                case 5:
-                                    break;
+                                        Console.WriteLine("Välj [3] för att plocka upp kaninen.");
+                                        Console.WriteLine("Välj [4] för att få kaninen att gå.");
+                                        break;
+                                    case 3:
+                                        break;
+                                    case 4:
+                                        break;
+                                    case 5:
+                                        break;
+                                }
                             }
+                            else if (inputInteger2 == 0 || inputInteger2 > 5)
+                            {
+                                Console.WriteLine("Error! Du måste skriva en siffra mellan 1 och 5.");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Error. Du måste skriva en siffra!");
+                            }
+                                
                             break;
                         case 2:
                             break;
