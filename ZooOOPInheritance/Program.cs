@@ -115,17 +115,31 @@
                                             switch (marmotMenuInputInt)
                                             {
                                                 case 1:
+                                                    //Marmot sound.
                                                     marmot.MakeSound();
+
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 2:
                                                     marmot.Behaviour();
+
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 3:
                                                     marmot.FeedMarmot();
+
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
 
                                                 case 4:
                                                     marmot.Run();
+
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
+
                                                     break;
                                             }
                                         }
