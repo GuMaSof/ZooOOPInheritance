@@ -28,7 +28,7 @@
             int inputInteger; //Converted userInput stored here.
 
             //Laying groundwork for menu structure with a while loop that may be turned of later with bool value.
-            while (menuLoop = true)
+            while (menuLoop == true)
             {
                 Console.WriteLine("Välkommen till OOP ZOO!");
                 Console.WriteLine("Vi kan stolt säga att vi har ett brett utbud på gnagare.");
