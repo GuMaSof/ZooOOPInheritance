@@ -21,8 +21,10 @@
                 "Ögonen är uppspärrade", "Och öronen är väldigt stora");
 
             //Variables necessary for menu structure.
-            bool menuLoop = true;
 
+            bool menuLoop = true; //For the main menu.
+            //This bool will keep the new animal object in existance for long enough for the user to enjoy it.
+            bool newAnimalLoop = false;
             //I have chosen to have multiple different variables for different menus to minimize potential errors.
 
             //Strings for storage of choices by user to guide switch statements.
@@ -375,25 +377,43 @@
 
                             Animal animal = new Animal(newAnimalSound, newAnimalHabits, newAnimalName, newAnimalFur, newAnimalTail);
 
-                            //Input.
-                            createAnimalInputStr = Console.ReadLine();
-                            //TryParse system.
-                            if (Int32.TryParse(createAnimalInputStr, out createAnimalInputInt))
+                            newAnimalLoop = true;
+                            //While loop to make the new object of the Animal class last longer. 
+                            while (newAnimalLoop == true)
                             {
-                                //Menu for new animal.
-                                switch (createAnimalInputInt)
+                                Console.WriteLine("Välj vad du vill se det nya djuret göra.");
+
+                                Console.WriteLine("Tryck [1] för att höra djurets läte.");
+                                Console.WriteLine("Tryck [2] för att se djurets beteende");
+                                Console.WriteLine("Tryck [3] för att få djuret att gå.");
+
+                                //Input.
+                                createAnimalInputStr = Console.ReadLine();
+                                //TryParse system.
+                                if (Int32.TryParse(createAnimalInputStr, out createAnimalInputInt))
                                 {
-                                    case 1:
-                                        break;
-                                    case 2:
-                                        break;
-                                    case 3:
-                                        break;
+                                    //Menu for new animal.
+                                    switch (createAnimalInputInt)
+                                    {
+                                        case 1:
+                                            animal.MakeSound();
+                                            Console.ReadLine();
+                                            break;
+                                        case 2:
+                                            animal.Behaviour();
+                                            Console.ReadLine();
+                                            break;
+                                        case 3:
+                                            animal.Run();
+                                            Console.ReadLine();
+                                            newAnimalLoop = false;
+                                            break;
+                                    }
                                 }
-                            }
-                            else
-                            {
-                                Console.WriteLine("Error. Du måste skriva en siffra!");
+                                else
+                                {
+                                    Console.WriteLine("Error. Du måste skriva en siffra!");
+                                }
                             }
                                 break;
                         case 3:
