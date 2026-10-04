@@ -106,7 +106,30 @@
 
                                         Console.WriteLine("Välj [3] för att mata murmeldjuret.");
                                         Console.WriteLine("Välj [4] för att få murmeldjuret att gå.");
-                                        break;
+
+                                        marmotInputStr = Console.ReadLine();
+
+                                        if (Int32.TryParse(marmotInputStr, out marmotMenuInputInt))
+                                        {
+                                            //I will call this the marmot menu from now on.
+                                            switch (marmotMenuInputInt)
+                                            {
+                                                case 1:
+                                                    marmot.MakeSound();
+                                                    break;
+                                                case 2:
+                                                    marmot.Behaviour();
+                                                    break;
+                                                case 3:
+                                                    marmot.FeedMarmot();
+                                                    break;
+
+                                                case 4:
+                                                    marmot.Run();
+                                                    break;
+                                            }
+                                        }
+                                            break;
                                     case 2:
                                         Console.Clear(); //Cleans up the console from excessive info.
                                         Console.WriteLine("Kanin alltså! Vilket roligt val!");
