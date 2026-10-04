@@ -144,6 +144,10 @@
                                                     break;
                                             }
                                         }
+                                        else
+                                        {
+                                            Console.WriteLine("Error. Du måste skriva en siffra!");
+                                        }
                                             break;
                                     case 2:
                                         Console.Clear(); //Cleans up the console from excessive info.
@@ -184,6 +188,10 @@
                                                     Console.ReadLine();
                                                     break;
                                             }
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Error. Du måste skriva en siffra!");
                                         }
                                             break;
                                     case 3:
@@ -233,6 +241,10 @@
                                                     break;
                                             }
                                         }
+                                        else
+                                        {
+                                            Console.WriteLine("Error. Du måste skriva en siffra!");
+                                        }
                                             break;
                                     case 4:
                                         Console.Clear(); //Cleans up the console from excessive info.
@@ -245,7 +257,18 @@
 
                                         Console.WriteLine("Välj [4] för att plocka upp haren.");
                                         Console.WriteLine("Välj [5] för att få haren att gå.");
-                                        break;
+
+                                        jackRabbitInputStr = Console.ReadLine();
+
+                                        if (Int32.TryParse(jackRabbitInputStr, out jackRabbitInputInt))
+                                        {
+
+                                        }
+                                        else
+                                        {
+
+                                        }
+                                            break;
                                     case 5:
                                         Console.Clear(); //Cleans up the console from excessive info.
                                         Console.WriteLine("Lodjur! Vad roligt att du är så intresserad av nordens största kattdjur!");
@@ -258,10 +281,6 @@
                                         Console.WriteLine("Välj [4] för att få lodjuret att gå.");
                                         break;
                                 }
-                            }
-                            else if (animalMenuInputInt == 0 || animalMenuInputInt > 5)
-                            {
-                                Console.WriteLine("Error! Du måste skriva en siffra mellan 1 och 5.");
                             }
                             else
                             {
@@ -277,10 +296,6 @@
                             break;
                     }
                     
-                }
-                else if (mainMenuInputInt == 0 || mainMenuInputInt > 2)
-                {
-                    Console.WriteLine("Error! Du måste skriva antingen 1 eller 2.");
                 }
                 else
                 {
