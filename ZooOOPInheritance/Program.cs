@@ -380,7 +380,16 @@
                             //TryParse system.
                             if (Int32.TryParse(createAnimalInputStr, out createAnimalInputInt))
                             {
-                                //Menu for new animal
+                                //Menu for new animal.
+                                switch (createAnimalInputInt)
+                                {
+                                    case 1:
+                                        break;
+                                    case 2:
+                                        break;
+                                    case 3:
+                                        break;
+                                }
                             }
                             else
                             {
