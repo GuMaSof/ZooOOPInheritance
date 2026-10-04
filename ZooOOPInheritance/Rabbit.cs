@@ -10,7 +10,7 @@ namespace ZooOOPInheritance
         //Class property.
         protected string grunt = "grymta";
 
-        //Cnstructor for inheritance from Animal class.
+        //Constructor for inheritance from Animal class.
         public Rabbit (string sound, string habits, string name, string fur, string tail, string grunt) : base( sound, habits, name, fur, tail)
         {
             //Providing access to protected the variable above in this class.

@@ -15,9 +15,8 @@
                 "Kort", "tar tag i maten");
 
             SwampRabbit swampRabbit = new SwampRabbit("stampar", "gräver.", "Louise", "Kort och brun",
-                "Fluffig och kort", "grymta", true);
+                "Fluffig och kort", "grymta", "kan simma!");
 
-            
         }
     }
 }
