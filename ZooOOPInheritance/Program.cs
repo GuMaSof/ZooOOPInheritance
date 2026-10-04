@@ -198,7 +198,42 @@
                                         Console.WriteLine("Välj [3] för att plocka upp kaninen.");
                                         Console.WriteLine("Välj [4] för att se kaninen simma.");
                                         Console.WriteLine("Välj [5] för att få kaninen att gå.");
-                                        break;
+
+                                        swampRabbitInputStr = Console.ReadLine();
+
+                                        if (Int32.TryParse(swampRabbitInputStr, out swampRabbitInputInt))
+                                        {
+                                            //Swamp Rabbit menu.
+                                            switch (swampRabbitInputInt)
+                                            {
+                                                case 1:
+                                                    swampRabbit.MakeSound();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
+                                                    break;
+                                                case 2:
+                                                    swampRabbit.Behaviour();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
+                                                    break;
+                                                case 3:
+                                                    swampRabbit.PickUp();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
+                                                    break;
+                                                case 4:
+                                                    swampRabbit.Bathe();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
+                                                    break;
+                                                case 5:
+                                                    swampRabbit.Run();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
+                                                    break;
+                                            }
+                                        }
+                                            break;
                                     case 4:
                                         Console.Clear(); //Cleans up the console from excessive info.
                                         Console.WriteLine("Åsnesvanshare? Vilket intressant val!");
