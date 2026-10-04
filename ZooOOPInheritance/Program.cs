@@ -370,6 +370,8 @@
 
                             Console.WriteLine("Säg hur djurets svans ser ut");
                             newAnimalTail = Console.ReadLine();
+
+                            Animal animal = new Animal(newAnimalSound, newAnimalHabits, newAnimalName, newAnimalFur, newAnimalTail);
                             break;
                         case 3:
                             Console.WriteLine("Hejdå!");
