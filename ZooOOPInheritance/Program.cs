@@ -7,8 +7,6 @@
             //Immidiate design of objects of the relevant classes from the very start.
             Rabbit rabbit = new Rabbit("stampar", "gräver.", "Nellie", "Lång och brun", "Fluffig", "grymta");
 
-            Animal animal = new Animal("Mjau", "skygg", "Malte", "långt", "lång och yvig");
-
             Lynx lynx = new Lynx("Mjau", "skär köttet i små delar", "Amadeus", "Kort of gulbrun",
                 "Kort", "klättrar i ett träd");
 
@@ -26,6 +24,8 @@
             bool menuLoop = true;
 
             //I have chosen to have multiple different variables for different menus to minimize potential errors.
+
+            //Strings for storage of choices by user to guide switch statements.
             string mainMenuInputStr; //Unconverted user input for Main menu stored here.
             string animalMenuInputStr; //Unconverted input user input for Animal menu here.
             string marmotInputStr; //Unconverted input user input for Marmot menu here.
@@ -46,6 +46,14 @@
             int jackRabbitInputInt; //Converted userinput black tailed jack rabbit menu.
 
             int lynxInputInt;
+
+            //Animal variables for constructor when we create a new animal.
+            string newAnimalSound;
+            string newAnimalHabits;
+            string newAnimalName;
+
+            string newAnimalFur;
+            string newAnimalTail;
 
             //Laying groundwork for menu structure with a while loop that may be turned of later with bool value.
             while (menuLoop == true)
@@ -307,7 +315,35 @@
 
                                         Console.WriteLine("Välj [3] för att se lokatten klättra i ett träd.");
                                         Console.WriteLine("Välj [4] för att få lodjuret att gå.");
-                                        break;
+
+                                        lynxInputStr = Console.ReadLine();
+
+                                        if (Int32.TryParse(lynxInputStr, out lynxInputInt))
+                                        {
+                                            switch (lynxInputInt)
+                                            {
+                                                case 1:
+                                                    lynx.MakeSound();
+
+                                                    break;
+                                                case 2:
+                                                    lynx.Behaviour();
+
+                                                    break;
+                                                case 3:
+                                                    lynx.ClimbTree();
+
+                                                    break;
+                                                case 4:
+                                                    lynx.Run();
+                                                    break;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("Error. Du måste skriva en siffra!");
+                                        }
+                                            break;
                                 }
                             }
                             else
@@ -317,13 +353,29 @@
                                 
                             break;
                         case 2:
+                            Console.WriteLine("Så du vill du vill se ett helt nytt djur?");
+                            Console.WriteLine("Ge oss då ett par karaktärsdrag så ska vi se vad vi kan tänkas visa er.");
+
+                            Console.WriteLine("Säg hur djuret låter.");
+                            newAnimalSound = Console.ReadLine();
+
+                            Console.WriteLine("Säg hur djuret beter sig.");
+                            newAnimalHabits = Console.ReadLine();
+
+                            Console.WriteLine("Säg djurets namn.");
+                            newAnimalName = Console.ReadLine();
+
+                            Console.WriteLine("Säg hur djurets päls är.");
+                            newAnimalFur = Console.ReadLine();
+
+                            Console.WriteLine("Säg hur djurets svans ser ut");
+                            newAnimalTail = Console.ReadLine();
                             break;
                         case 3:
                             Console.WriteLine("Hejdå!");
                             menuLoop = false;
                             break;
                     }
-                    
                 }
                 else
                 {
