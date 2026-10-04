@@ -6,8 +6,8 @@ namespace ZooOOPInheritance
 {
     internal class SwampRabbit: Rabbit
     {
-        protected bool canSwim = true;
-        public SwampRabbit(string sound, string habits, string name, string fur, string tail, string grunt, bool canSwim) : base(sound, habits, name, fur, tail, grunt)
+        protected string canSwim = "kan simma!";
+        public SwampRabbit(string sound, string habits, string name, string fur, string tail, string grunt, string canSwim) : base(sound, habits, name, fur, tail, grunt)
         {
             //Providing access to protected variables above in this class.
             this.canSwim = canSwim;
@@ -37,15 +37,8 @@ namespace ZooOOPInheritance
         //Unique method of Swamp Rabbit.
         public void Bathe()
         {
-            if (canSwim == true)
-            {
-                Console.WriteLine("Ser man på, " + name + " kan simma!");
-                Console.WriteLine("Detta beror på att Louise är en träskkanin ifrån Louisiana.");
-            }
-            else
-            {
-                Console.WriteLine(name + " tycker inte om att bada. Hon hoppar ut ur vattnet för att fly!");
-            }
+            Console.WriteLine("Ser man på, " + name + " " + canSwim);
+            Console.WriteLine("Detta beror på att " + name + " är en träskkanin ifrån Louisiana.");
         }
     }
 }
