@@ -35,6 +35,7 @@
             string jackRabbitInputStr; //Unconverted input user input for black tailed jack rabbit menu here.
 
             string lynxInputStr; //Unconverted input user input for lynx menu here.
+            string createAnimalInputStr; //Unconverted input user input for creation of new animal menu here.
 
             //Integer outputs for navigating switch statements between cases.
             int mainMenuInputInt; //Converted user input from main menu stored here.
@@ -46,6 +47,7 @@
             int jackRabbitInputInt; //Converted userinput black tailed jack rabbit menu.
 
             int lynxInputInt;
+            int createAnimalInputInt;
 
             //Animal variables for constructor when we create a new animal.
             string newAnimalSound;
@@ -372,7 +374,19 @@
                             newAnimalTail = Console.ReadLine();
 
                             Animal animal = new Animal(newAnimalSound, newAnimalHabits, newAnimalName, newAnimalFur, newAnimalTail);
-                            break;
+
+                            //Input.
+                            createAnimalInputStr = Console.ReadLine();
+                            //TryParse system.
+                            if (Int32.TryParse(createAnimalInputStr, out createAnimalInputInt))
+                            {
+                                //Menu for new animal
+                            }
+                            else
+                            {
+                                Console.WriteLine("Error. Du måste skriva en siffra!");
+                            }
+                                break;
                         case 3:
                             Console.WriteLine("Hejdå!");
                             menuLoop = false;
