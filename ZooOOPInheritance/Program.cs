@@ -163,13 +163,25 @@
                                             switch (rabbitMenuInputInt)
                                             {
                                                 case 1:
-
+                                                    rabbit.MakeSound();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 2:
+                                                    rabbit.Behaviour();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
+
                                                 case 3:
+                                                    rabbit.PickUp();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 4:
+                                                    rabbit.Run();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                             }
                                         }
