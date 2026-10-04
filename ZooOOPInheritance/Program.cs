@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            //Immidiate design of objects of the relevant classes from the very start.
             Rabbit rabbit = new Rabbit("stampar", "gräver.", "Nellie", "Lång och brun", "Fluffig", "grymta");
 
             Animal animal = new Animal("Mjau", "skygg", "Malte", "långt", "lång och yvig");
@@ -26,6 +27,7 @@
             string inputString = ""; //Unconverted user input stored here.
             int inputInteger; //Converted userInput stored here.
 
+            //Laying groundwork for menu structure with a while loop that may be turned of later with bool value.
             while (menuLoop = true)
             {
                 Console.WriteLine("Välkommen till OOP ZOO!");
@@ -38,12 +40,43 @@
                 Console.WriteLine("Om det kan tänkas finnas finnas ett djur som ni är mer intresserad av,");
                 Console.WriteLine("säg bara till.");
 
-                Console.WriteLine("Tryck [1] för att få se ett murmeldjur");
-                Console.WriteLine("Tryck [2] för att se en träskkanin.");
-                Console.WriteLine("Tryck [3] för att få se en åsnesvanshare");
+                Console.WriteLine("Tryck [1] för att få se på ett av dom nämnda djuren.");
+                Console.WriteLine("Tryck [2] för att se ett annat djur.");
 
-                Console.WriteLine("Tryck [4] för att få se ett lodjur");
-                Console.WriteLine("Tryck [5] för att få se ett annat djur.");
+                //User input.
+                inputString = Console.ReadLine();
+
+                /*Safety system against wrong input, such as unconvertable symbols, like letters.
+                 * But additionally numbers that are either two high or two low.
+                 * Of course we also have conversion of strings when possible here as well.
+                 
+                 In summary this if-statement does not handle the overall selection of the menu structure,
+                so much as it manages potential errors that may inconvience our intended purpose.*/ 
+                if (Int32.TryParse(inputString, out inputInteger))
+                {
+                    /*I have chosen to have an if-statement here too,
+                     * because we are only going to have two choices anyway.
+                     * The greater number of choices will be put further down in a switch statement.*/
+                    if(inputInteger == 1)
+                    {
+                        Console.WriteLine("Tryck [1] för att få se ett murmeldjur");
+
+                        Console.WriteLine("Tryck [2] för att se en vanlig kanin");
+                        Console.WriteLine("Tryck [3] för att se en träskkanin.");
+                        Console.WriteLine("Tryck [4] för att få se en åsnesvanshare");
+
+                        Console.WriteLine("Tryck [4] för att få se ett lodjur.");
+                    }
+                }
+                else if (inputInteger == 0 || inputInteger > 2)
+                {
+                    Console.WriteLine("Error! Du måste skriva antingen 1 eller 2.");
+                }
+                else
+                {
+                    Console.WriteLine("Error. Du måste skriva en siffra!");
+                }
+
             }
         }
     }
