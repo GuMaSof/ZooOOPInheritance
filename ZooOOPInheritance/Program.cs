@@ -97,6 +97,7 @@
                                 switch (animalMenuInputInt)
                                 {
                                     case 1:
+                                        Console.Clear(); //Cleans up the console from excessive info.
                                         Console.WriteLine("Murmeldjur alltså! Vilket roligt val!");
                                         Console.WriteLine("Vårt murmeldjur heter Otto.");
 
@@ -107,6 +108,7 @@
                                         Console.WriteLine("Välj [4] för att få murmeldjuret att gå.");
                                         break;
                                     case 2:
+                                        Console.Clear(); //Cleans up the console from excessive info.
                                         Console.WriteLine("Kanin alltså! Vilket roligt val!");
 
                                         Console.WriteLine("Välj [1] för att få höra kaninens läte.");
@@ -116,12 +118,40 @@
                                         Console.WriteLine("Välj [4] för att få kaninen att gå.");
                                         break;
                                     case 3:
+                                        Console.Clear(); //Cleans up the console from excessive info.
                                         Console.WriteLine("Haha, jag visste att du vill se på den!");
                                         Console.WriteLine("Alla blir så förvånade då dom hör talas om träskkaniner.");
+                                        Console.WriteLine("Vår träskkanin heter Louise, föra att hon kommer ifrån Louisiana.");
+
+                                        Console.WriteLine("Välj [1] för att få höra kaninens läte.");
+                                        Console.WriteLine("Välj [2] för att se på kaninens beteende.");
+
+                                        Console.WriteLine("Välj [3] för att plocka upp kaninen.");
+                                        Console.WriteLine("Välj [4] för att se kaninen simma.");
+                                        Console.WriteLine("Välj [5] för att få kaninen att gå.");
                                         break;
                                     case 4:
+                                        Console.Clear(); //Cleans up the console from excessive info.
+                                        Console.WriteLine("Åsnesvanshare? Vilket intressant val!");
+                                        Console.WriteLine("Vår åsnesvanshare heter Långben för att hans ben är mycket längre än på kaninerna.");
+
+                                        Console.WriteLine("Välj [1] för att titta närmare på haren.");
+                                        Console.WriteLine("Välj [2] för att få höra harens läte.");
+                                        Console.WriteLine("Välj [3] för att se på harens beteende.");
+
+                                        Console.WriteLine("Välj [4] för att plocka upp haren.");
+                                        Console.WriteLine("Välj [5] för att få haren att gå.");
                                         break;
                                     case 5:
+                                        Console.Clear(); //Cleans up the console from excessive info.
+                                        Console.WriteLine("Lodjur! Vad roligt att du är så intresserad av nordens största kattdjur!");
+                                        Console.WriteLine("Vårt lodjur heter Amadeus");
+
+                                        Console.WriteLine("Välj [1] för att få höra lodjurets läte.");
+                                        Console.WriteLine("Välj [2] för att se på lodjurets beteende.");
+
+                                        Console.WriteLine("Välj [3] för att se lokatten klättra i ett träd.");
+                                        Console.WriteLine("Välj [4] för att få lodjuret att gå.");
                                         break;
                                 }
                             }
