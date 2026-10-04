@@ -4,6 +4,8 @@
     {
         static void Main(string[] args)
         {
+            //Will be used for storage of created animals.
+            List<Animal> createdAnimals = new List<Animal>();
             //Immidiate design of objects of the relevant classes from the very start.
             Rabbit rabbit = new Rabbit("stampar", "gräver.", "Nellie", "Lång och brun", "Fluffig", "grymta");
 
@@ -21,10 +23,8 @@
                 "Ögonen är uppspärrade", "Och öronen är väldigt stora");
 
             //Variables necessary for menu structure.
-
             bool menuLoop = true; //For the main menu.
-            //This bool will keep the new animal object in existance for long enough for the user to enjoy it.
-            bool newAnimalLoop = false;
+            
             //I have chosen to have multiple different variables for different menus to minimize potential errors.
 
             //Strings for storage of choices by user to guide switch statements.
@@ -328,18 +328,19 @@
                                             {
                                                 case 1:
                                                     lynx.MakeSound();
-
+                                                    Console.ReadLine();
                                                     break;
                                                 case 2:
                                                     lynx.Behaviour();
-
+                                                    Console.ReadLine();
                                                     break;
                                                 case 3:
                                                     lynx.ClimbTree();
-
+                                                    Console.ReadLine();
                                                     break;
                                                 case 4:
                                                     lynx.Run();
+                                                    Console.ReadLine();
                                                     break;
                                             }
                                         }
@@ -374,48 +375,45 @@
 
                             Console.WriteLine("Säg hur djurets svans ser ut");
                             newAnimalTail = Console.ReadLine();
+                            Animal animal;
 
-                            Animal animal = new Animal(newAnimalSound, newAnimalHabits, newAnimalName, newAnimalFur, newAnimalTail);
+                            animal = new Animal(newAnimalSound, newAnimalHabits, newAnimalName, newAnimalFur, newAnimalTail);
+                            createdAnimals.Add(animal);
 
-                            newAnimalLoop = true;
-                            //While loop to make the new object of the Animal class last longer. 
-                            while (newAnimalLoop == true)
+                            Console.WriteLine("Välj vad du vill se det nya djuret göra.");
+
+                            Console.WriteLine("Tryck [1] för att höra djurets läte.");
+                            Console.WriteLine("Tryck [2] för att se djurets beteende");
+                            Console.WriteLine("Tryck [3] för att få djuret att gå.");
+
+                            //Input.
+                            createAnimalInputStr = Console.ReadLine();
+                            //TryParse system.
+                            if (Int32.TryParse(createAnimalInputStr, out createAnimalInputInt))
                             {
-                                Console.WriteLine("Välj vad du vill se det nya djuret göra.");
-
-                                Console.WriteLine("Tryck [1] för att höra djurets läte.");
-                                Console.WriteLine("Tryck [2] för att se djurets beteende");
-                                Console.WriteLine("Tryck [3] för att få djuret att gå.");
-
-                                //Input.
-                                createAnimalInputStr = Console.ReadLine();
-                                //TryParse system.
-                                if (Int32.TryParse(createAnimalInputStr, out createAnimalInputInt))
+                                //Menu for new animal.
+                                switch (createAnimalInputInt)
                                 {
-                                    //Menu for new animal.
-                                    switch (createAnimalInputInt)
-                                    {
-                                        case 1:
-                                            animal.MakeSound();
-                                            Console.ReadLine();
-                                            break;
-                                        case 2:
-                                            animal.Behaviour();
-                                            Console.ReadLine();
-                                            break;
-                                        case 3:
-                                            animal.Run();
-                                            Console.ReadLine();
-                                            newAnimalLoop = false;
-                                            break;
-                                    }
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Error. Du måste skriva en siffra!");
+                                    case 1:
+                                        animal.MakeSound();
+                                        Console.ReadLine();
+                                        break;
+                                    case 2:
+                                        animal.Behaviour();
+                                        Console.ReadLine();
+                                        break;
+                                    case 3:
+                                        animal.Run();
+                                        Console.ReadLine();
+                                        break;
                                 }
                             }
-                                break;
+                            else
+                            {
+                                Console.WriteLine("Error. Du måste skriva en siffra!");
+                            }
+
+                            break;
                         case 3:
                             Console.WriteLine("Hejdå!");
                             menuLoop = false;
