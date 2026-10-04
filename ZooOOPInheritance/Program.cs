@@ -266,14 +266,29 @@
                                             switch (jackRabbitInputInt)
                                             {
                                                 case 1:
+                                                    longLegs.LookAtJackRabbit();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 2:
+                                                    longLegs.MakeSound();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 3:
+                                                    longLegs.Behaviour();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 4:
+                                                    longLegs.PickUp();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                                 case 5:
+                                                    longLegs.Run();
+                                                    //Keeps console open long enough to see text string.
+                                                    Console.ReadLine();
                                                     break;
                                             }
                                         }
