@@ -36,6 +36,7 @@
 
             string lynxInputStr; //Unconverted input user input for lynx menu here.
 
+            //Integer outputs for navigating switch statements between cases.
             int mainMenuInputInt; //Converted user input from main menu stored here.
             int animalMenuInputInt; //Converted userInput from animal menu stored here.
             int marmotMenuInputInt; //Converted userInput from Marmot menu stored here.
@@ -153,7 +154,26 @@
 
                                         Console.WriteLine("Välj [3] för att plocka upp kaninen.");
                                         Console.WriteLine("Välj [4] för att få kaninen att gå.");
-                                        break;
+
+                                        rabbitMenuInputStr = Console.ReadLine();
+
+                                        if (Int32.TryParse(rabbitMenuInputStr, out rabbitMenuInputInt))
+                                        {
+                                            //This is the Generel Rabbit menu.
+                                            switch (rabbitMenuInputInt)
+                                            {
+                                                case 1:
+
+                                                    break;
+                                                case 2:
+                                                    break;
+                                                case 3:
+                                                    break;
+                                                case 4:
+                                                    break;
+                                            }
+                                        }
+                                            break;
                                     case 3:
                                         Console.Clear(); //Cleans up the console from excessive info.
                                         Console.WriteLine("Haha, jag visste att du vill se på den!");
