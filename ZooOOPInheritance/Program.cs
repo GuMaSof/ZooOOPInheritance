@@ -17,6 +17,9 @@
             SwampRabbit swampRabbit = new SwampRabbit("stampar", "gräver.", "Louise", "Kort och brun",
                 "Fluffig och kort", "grymta", "kan simma!");
 
+            BlackTailedJackRabbit longLegs = new BlackTailedJackRabbit("stampar", "gräver.",
+                "Långben", "Kort och brun", "Fluffig, svart och kort", "grymta",
+                "Ögonen är uppspärrade", "Och öronen är väldigt stora");
         }
     }
 }

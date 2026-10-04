@@ -26,7 +26,7 @@ namespace ZooOOPInheritance
         //RunMethod for seeing how fast the animal can run and for what reason.
         public override void Run()
         {
-            Console.WriteLine(name + " vill inte umgås, så han sticker någon annanstans.");
+            Console.WriteLine(name + " vill inte umgås med människor, så han sticker någon annanstans.");
         }
         //Behaviour for displaying the various different habits of the animals.
         public override void Behaviour()
