@@ -22,14 +22,29 @@
                 "Långben", "Kort och brun", "Fluffig, svart och kort", "grymta",
                 "Ögonen är uppspärrade", "Och öronen är väldigt stora");
 
-            //Variables necessary for menu structure. I have chosen to have multiple different variables for different menus to minimize potential errors.
+            //Variables necessary for menu structure.
             bool menuLoop = true;
 
-            string inputString1; //Unconverted user input for main menu stored here.
-            string inputString2; //Unconverted input user input for animal menu here.
+            //I have chosen to have multiple different variables for different menus to minimize potential errors.
+            string mainMenuInputStr; //Unconverted user input for Main menu stored here.
+            string animalMenuInputStr; //Unconverted input user input for Animal menu here.
+            string marmotInputStr; //Unconverted input user input for Marmot menu here.
 
-            int inputInteger1; //Converted user input from main menu stored here.
-            int inputInteger2; //Converted userInput from animal menu stored here.
+            string rabbitMenuInputStr; //Unconverted input user input for general rabbit menu here.
+            string swampRabbitInputStr; //Unconverted input user input for swamp rabbit menu here.
+            string jackRabbitInputStr; //Unconverted input user input for black tailed jack rabbit menu here.
+
+            string lynxInputStr; //Unconverted input user input for lynx menu here.
+
+            int mainMenuInputInt; //Converted user input from main menu stored here.
+            int animalMenuInputInt; //Converted userInput from animal menu stored here.
+            int marmotMenuInputInt; //Converted userInput from Marmot menu stored here.
+
+            int rabbitMenuInputInt; //Converted userinput rabbit menu.
+            int swampRabbitInputInt; //Converted userinput swamp rabbit menu.
+            int jackRabbitInputInt; //Converted userinput black tailed jack rabbit menu.
+
+            int lynxInputInt;
 
             //Laying groundwork for menu structure with a while loop that may be turned of later with bool value.
             while (menuLoop == true)
@@ -50,7 +65,7 @@
                 Console.WriteLine("Tryck [3] för att lämna OOP Zoo.");
 
                 //User input.
-                inputString1 = Console.ReadLine();
+                mainMenuInputStr = Console.ReadLine();
 
                 /*Safety system against wrong input, such as unconvertable symbols, like letters.
                  * But additionally numbers that are either two high or two low.
@@ -58,11 +73,11 @@
                  
                  In summary this if-statement does not handle the overall selection of the menu structure,
                 so much as it manages potential errors that may inconvience our intended purpose.*/ 
-                if (Int32.TryParse(inputString1, out inputInteger1))
+                if (Int32.TryParse(mainMenuInputStr, out mainMenuInputInt))
                 {
                     /*I have chosen to split up the choices into two different menu setups to minimize text on the console.
                      * I call this menu the "Main menu"*/
-                    switch (inputInteger1)
+                    switch (mainMenuInputInt)
                     {
                         case 1:
                             Console.Clear(); //Cleans up the console from excessive info.
@@ -73,13 +88,13 @@
                             Console.WriteLine("Tryck [4] för att få se en åsnesvanshare");
 
                             Console.WriteLine("Tryck [5] för att få se ett lodjur.");
-                            inputString2 = Console.ReadLine();
+                            animalMenuInputStr = Console.ReadLine();
 
                             //Seeking errors in and converts input for the choice of animal in the larger "Animal menu".
-                            if (Int32.TryParse(inputString2, out inputInteger2))
+                            if (Int32.TryParse(animalMenuInputStr, out animalMenuInputInt))
                             {
                                 //I call this one the "Animal menu".
-                                switch (inputInteger2)
+                                switch (animalMenuInputInt)
                                 {
                                     case 1:
                                         Console.WriteLine("Murmeldjur alltså! Vilket roligt val!");
@@ -101,6 +116,8 @@
                                         Console.WriteLine("Välj [4] för att få kaninen att gå.");
                                         break;
                                     case 3:
+                                        Console.WriteLine("Haha, jag visste att du vill se på den!");
+                                        Console.WriteLine("Alla blir så förvånade då dom hör talas om träskkaniner.");
                                         break;
                                     case 4:
                                         break;
@@ -108,7 +125,7 @@
                                         break;
                                 }
                             }
-                            else if (inputInteger2 == 0 || inputInteger2 > 5)
+                            else if (animalMenuInputInt == 0 || animalMenuInputInt > 5)
                             {
                                 Console.WriteLine("Error! Du måste skriva en siffra mellan 1 och 5.");
                             }
@@ -126,10 +143,8 @@
                             break;
                     }
                     
-
-                    
                 }
-                else if (inputInteger1 == 0 || inputInteger1 > 2)
+                else if (mainMenuInputInt == 0 || mainMenuInputInt > 2)
                 {
                     Console.WriteLine("Error! Du måste skriva antingen 1 eller 2.");
                 }
