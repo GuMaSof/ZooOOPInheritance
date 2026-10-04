@@ -17,5 +17,7 @@ namespace ZooOOPInheritance
             fur = "Kort och brun";
             tail = "Fluffig, kort och svart";
         }
+
+        //Methods down here.
     }
 }

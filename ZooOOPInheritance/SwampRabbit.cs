@@ -21,18 +21,19 @@ namespace ZooOOPInheritance
         //MakeSound
         public override void MakeSound()
         {
-            Console.WriteLine("Nä, " + name + " " + sound + "! Nu är hon arg!");
+            Console.WriteLine("Nä, " + name + " " + sound + "så det plaskar i träsket!");
         }
         //Run
         public override void Run()
         {
-            Console.WriteLine(name + " blir rädd och hoppar ned i sin håla där hon känner sig säker.");
+            Console.WriteLine(name + " blir rädd och simmar iväg till sin håla där hon känner sig säker.");
         }
         //Behaviour unique to rabbits.
         public override void Behaviour()
         {
 
             Console.WriteLine(name + " " + habits);
+            Console.WriteLine("Kanin är ju " + " " + name + " ändå!");
         }
         //Unique method of Swamp Rabbit.
         public void Bathe()
