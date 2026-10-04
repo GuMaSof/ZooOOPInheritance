@@ -7,7 +7,7 @@ namespace ZooOOPInheritance
     internal class SwampRabbit: Rabbit
     {
         protected bool canSwim = true;
-        public SwampRabbit(string sound, string habits, string name, string fur, string tail, string stomp, bool canSwim) : base(sound, habits, name, fur, tail, stomp)
+        public SwampRabbit(string sound, string habits, string name, string fur, string tail, string grunt, bool canSwim) : base(sound, habits, name, fur, tail, grunt)
         {
             //Providing access to protected variables above in this class.
             this.canSwim = canSwim;
@@ -21,7 +21,7 @@ namespace ZooOOPInheritance
         //MakeSound
         public override void MakeSound()
         {
-            Console.WriteLine("Nä, " + name + " " + stomp + "! Nu är hon arg!");
+            Console.WriteLine("Nä, " + name + " " + sound + "! Nu är hon arg!");
         }
         //Run
         public override void Run()
