@@ -21,7 +21,7 @@ namespace ZooOOPInheritance
         //MakeSound
         public override void MakeSound()
         {
-            Console.WriteLine("Nä, " + name + " " + sound + "så det plaskar i träsket!");
+            Console.WriteLine("Nä, " + name + " " + sound + " så det plaskar i träsket!");
         }
         //Run
         public override void Run()
